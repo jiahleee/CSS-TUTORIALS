@@ -22,15 +22,6 @@ body {
     background-color: #f8f9fa;
 }
 
-body::after {
-    content: "kimbug©";
-    display: block;
-    margin-top: 50px;
-    color: #1f2d3d;
-    font-size: 12px;
-    font-weight: 600;
-}
-
 /* Breadcrumb */
 
 .breadcrumb {
@@ -50,7 +41,7 @@ body::after {
     background-color: transparent;
     background-position: center center;
     background-size: contain;
-    background-image: url("./assets/icon-repository.svg");
+    background-image: url("assets/icon-repository.svg");
     background-repeat: no-repeat;
 }
 

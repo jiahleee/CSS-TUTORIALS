@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product Card</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Place your fontawesome kit's code here -->
+    <script src="https://kit.fontawesome.com/3625c042d9.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-$END$
+<div class="product-card">
+    <div class="product-card-image">
+        <img
+                src="https://user-images.githubusercontent.com/19285811/69318246-becd7980-0c77-11ea-8324-6c43e2de8cf2.png"
+                alt=""
+        />
+    </div>
+
+    <div class="product-card-title">
+        <h1>
+            혼자가 혼자에게
+        </h1>
+        <strong aria-label="오늘의 책 선정">
+            오늘의 책
+        </strong>
+    </div>
+
+    <div class="product-card-author">
+    <strong aria-label="저자 이병률">
+        이병률
+    </strong>
+    </div>
+    <div class="product-card-review">
+        <strong aria-label="평점 9.4">
+            <!-- aria-hidden은 내용적으로 중요하지 않은 style용 태그에 사용 -->
+            <span aria-hidden="true">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            </span>
+            9.4
+        </strong>
+    </div>
+</div>
 </body>
 </html>
