@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.02em;
+}
+
+a {
+    font-size: 18px;
+    line-height: 20px;
+    color: #8492a6;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tab-menu-item{
+    float: left;
+    /*이렇게 하면 부모태그 ul의 높이가 0이 된다.*/
+    margin-right: 16px;
+}
+
+/*부모태그의 높이가 0이 되지 않게 하는 법 1.overflow:hidden */
+/*
+.tab-menu{
+    overflow: hidden;
+}*/
+
+/*부모태그의 높이가 0이 되지 않게 하는 법 2.부모태그 마지막에 가상요소 만들기
+  content attr을 꼭 써주어야 한다.*/
+.tab-menu::after{
+    content: '';
+    display: block;/*clear을 사용하려면 무조건 block type 이어야한다.*/
+    clear: left; /*clear 속성을 사용하여 float*/
+}
+.tab-menu-item a{
+    padding: 16px 20px;
+    /* inline element는 padding-top,padding-bottom,margin-top,margin-bottom 사용 불가
+     anchor = inline element */
+    display: block;
+}
+
+.tab-menu{
+    border-bottom: 1px solid deeppink;
+    background-color: lightblue;
+    max-width: 540px;
+}
+.tab-menu-item.selected a {
+    color: #0257c7;
+    font-weight: 500;
+}
+
+.tab-menu-item.selected{
+    border-bottom: 3px solid gold;
+}

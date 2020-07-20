@@ -1,0 +1,77 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1f2d3d;
+    line-height: 1.25;
+}
+
+strong {
+    font-size: 14px;
+    font-weight: 400;
+    color: #afb3b9;
+    line-height: 1.4285714286;
+}
+
+p {
+    font-size: 16px;
+    color: #79818b;
+    line-height: 1.5;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.02em;
+    background-color: #80868e;
+}
+
+/*float 이용시 매번 가상요소를 넣는 것보다
+class를 하나 만들어서 사용하자*/
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.card-user{
+    width: 44px;
+    height: 44px;
+    /*border-radius*/
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card {
+    max-width: 540px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+.card-user {
+    float: left;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-content {
+    float: left;
+}
+
+.card-content h1 {
+    margin-bottom: 4px;
+}
+
+.card-content strong {
+    display: block;
+    margin-bottom: 12px;
+}
+
+
