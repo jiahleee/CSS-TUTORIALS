@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family:"Lato", sans-serif;;
+}
+
+
+.user-card{
+    width: 240px;
+    padding:8px 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+
+
+h1{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #273444;
+}
+
+.user-photo img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+/*img tag=inline element 인데 왜 width와 height를 줄 수 있나?
+파일자체가 가지고 있는 사이즈가 있어서 가능 , 다만 display:block 선언을 해주자.
+*/
+
+.user-status {
+    /*display: block;*/
+    width: 12px; /*box-sizing:border-box이므로 border도 포함한 전체길이*/
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: limegreen;
+    position: absolute;/*자동으로 display:block 바뀐다.*/
+    right:-2px;
+    bottom:-2px;
+}
+
+/*width와 height을 설정했는데 아무 변화가 없다면 요소의 display:inline인 것이므로
+display:block으로 바꾼다.*/
+
+.user-card::after{
+    content:'';
+    display: block;
+    clear: left;
+}
+
+.user-photo{
+    position: relative;
+    margin-right: 12px;
+}
+
+.user-photo,
+.user-name{
+    float: left;
+}
+
+/*float 사용시
+가로배치할 요소들에 float:left 등을 주고
+부모 요소에 가상요소를 만든다.
+*/
+
+.user-name{
+    padding: 8px 0px;
+}
+
+
+/*active표시용 span 프로필 우측하단으로 옮기기
+현재:전체 요소의 왼쪽 하단에 있는 span을 완전히 맥락에서 꺼내서
+user-photo의 특정 위치에 고정시키고 싶다.
+=>position:absolute를 사용!
+=>.user-status에 position:absolute주고
+=>기준점으로 삼고싶은 부모태그 .user-photo에 position:relative를 준다.(부모태그가 static이면 안된다)
+=> bottom,right 값을 주어서 적절히 이동.
++@
+1.요소를 viewport에 맞추고싶다->position:fixed
+2.원래 자신의 위치를 유지하면서 조금씩 옮기고 싶다->position:relative
+*/
