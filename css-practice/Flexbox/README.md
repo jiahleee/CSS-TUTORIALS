@@ -26,7 +26,7 @@
     (+@ row-reverse는 오->왼:main 위->아래:cross
         column-reverse는 아래->위:main 왼->오:cross)
 
-### 한줄안에 모든요소 정렬? or 여러줄에 정렬?
+### 3.한줄안에 모든요소 정렬? or 여러줄에 정렬?
 
     부모요소에 display:flex 를 주고, flex-wrap:nowrap을 주면
     wrap하지 않고 자식의 사이즈를 줄여서라도 한줄로 정렬해 버리는 것.
