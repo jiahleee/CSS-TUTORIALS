@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    color: #273444;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3333333333;
+}
+
+.profile-location {
+    font-size: 14px;
+    line-height: 1.4285714286;
+    color: #8492a6;
+}
+
+.profile-detail dt {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6666666667;
+    color: #8492a6;
+}
+
+.profile-detail dd {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.25;
+    color: #0066ff;
+}
+
+body{
+    display: flex;
+    flex-direction: row;/*생략가능*/
+    flex-wrap: nowrap;/*생략가능*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;/*viewport 의 height*/
+    background-color: #000000;
+
+}
+
+
+.profile{
+    /*자식요소 img,h1,등을 세로로 정렬하고싶을 때*/
+    width:368px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;/*세로축 하나만 사용할 것,크기를 줄여서라도 한 세로공간에 들어가도록*/
+    align-items: center;
+    padding: 32px 40px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.profile-image{
+    display: block;/*image->width,height,margin 주기 위해 block 명시 표기*/
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.profile-name{
+    margin-bottom: 4px;
+}
+
+.profile-location{
+    margin-bottom: 32px;
+}
+/*profile-detail 가로정렬하기->정렬하고픈 요소를 감싸고 있는 부모요소에 flexbox사용*/
+
+.profile-detail{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;/*가로정렬*/
+    flex-wrap: nowrap;/*무조건한줄로정렬*/
+    justify-content: space-between;/*main axis에 주는속성*/
+    align-items:center;/*cross axis에 주는 속성*/
+    text-align: center;
+}
+
