@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    /*viewport height 1vh=1%*/
+    background-color: aquamarine;
+    font-size: 30px;/*가상요소의 폰트 style 적어주기*/
+    font-weight: 700;
+    color: white;
+}
+
+.box::after{
+    content: "mobile";/*필수 attr*/
+}
+
+.box img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+@media screen and (min-width: 576px) {
+/*가로길이가 576px 이상일때만 적용이 될 css를 선언한다.*/
+    .box{
+        background-color: #0066ff;
+    }
+    .box::after{
+        content: "Landscape Phone";
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /*가로길이가 576px 이상일때만 적용이 될 css를 선언한다.*/
+    .box{
+        background-color: yellow;
+    }
+    .box::after{
+        content: "Tablet";
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:991px) {
+
+    .box{
+        background-color: pink;
+    }
+
+}
