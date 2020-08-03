@@ -1,0 +1,174 @@
+.like-button{
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+ font-family: "Poppins", sans-serif;
+}
+
+.sr-only{
+   /* display: none; 스크린리더도 읽지않는다 사용불가*/
+    position: absolute;
+    z-index: -100;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.card{
+    display: flex;
+    width: 840px;
+    justify-content: flex-start;
+    padding: 24px;
+}
+
+.card-image{
+   /* display: flex;
+    justify-content: center;
+    align-items: center;*/
+    width: 300px;
+    height: 200px;
+    border-radius: 6px;
+    background-image: url("./assets/img-house.jpg");/*url은 필수 attr*/
+    background-repeat: no-repeat;/*네개씩 안나오고 하나만 나오도록 설정*/
+    background-position: center center;
+    background-size: cover;/*영역 꽉채우기*/
+    overflow: hidden;/*삐져나간 부분은 안보이도록*/
+    margin-right: 24px;
+    position: relative;
+}
+
+/*
+어떤 크기와 비율의 사진이 들어오더라도 맞추어져야하는데 배경색이 보여진다.
+img 태그에 사진 넣기 말고 css backgroundimg로 처리하자.
+.card-image img{
+    width: 100%; !*부모태그 width 100%*!
+    height: auto;!*원래 크기 비율에 맞게 알아서 조정*!
+}
+*/
+
+.plus-badge{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.42857142;/*20px, em생략*/
+    color: white;
+    text-transform: uppercase;/*capitalize everything*/
+    background-color: #92174D;
+    display: inline-block; /*가로로 흐르는 inline의 성질 + width,height,margin,padding 설정가능(block)*/
+    padding: 1px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+
+.property-type span{
+    font-size: 16px;
+    line-height: 1.25;
+    color: #7d858f;
+}
+
+.property-rate{
+    font-size:16px;
+    line-height: 1.25;
+}
+
+.property-rate strong{
+    color: #151826;
+    font-weight: 400;
+
+}
+
+.property-rate span{
+    color: #7d858f;
+}
+
+/*markup이 되어있지 않은 별표를 styling 의미보다는 decoration에 가까우므로
+가상요소를 만들어서 styling 해주자.
+*/
+
+.property-rate::before{
+    content:'';/*가상요소의 필수 attr*/
+    position:relative;/*인라인블록때매약간의오차, 다른 요소에 영향 안미치면셔 */
+    top:2px;/*옮길정도 설정 위에로부터 2px 떨어지도록하기*/
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("./assets/icon-star.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+}
+
+.card-content{
+    flex-grow: 1;
+}
+.card-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;/*양옆에 떨어지도록*/
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-title{
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.6;
+    color:#151826;
+    font-weight: 400;
+}
+
+.property-detail{
+    font-size: 14px;
+    line-height:1.1428571429;
+    color: #7d858f;
+}
+
+.property-detail dd span::after{
+    content: '·';
+    margin: 0 8px;
+}
+
+.property-detail dd span:last-child::after {/*마지막 요소에는 중점 없도록*/
+    content: '';
+    margin: 0;
+}
+
+.property-detail div:first-child{
+    margin-bottom: 8px;
+}
+/*
+sr-only
+->screen-reader only ,눈에 보이지는 않음
+*/
+
+.card-image .like-button{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    background-image: url("./assets/icon-favorite.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+    cursor: pointer;
+    position: absolute;
+    top:12px;
+    left:12px;
+
+}
+
+/*
+자식태그를 부모태그의 위치에 비추어 위치시킬 때,
+position:absolute를 사용하여서 맥락에서 떼어서 위치시키자.
+1.부모태그의 position:static을 제외한 position:relative등을 준다.
+2.옮길 태그에 position:absolute를 준다.
+3.이동할 만틈 top/bottom left/right을 준다.
+*/
