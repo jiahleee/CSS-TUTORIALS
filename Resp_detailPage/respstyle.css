@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+}
+
+
+.card-header{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*양옆에 떨어지도록*/
+    align-items: center;
+    padding: 0 18px;
+}
+.card-header a{
+    text-decoration: none;
+    border: 1px solid red;
+}
+.product-type::before{
+    content:'';/*가상요소의 필수 attr*/
+    position:relative;
+    top:2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url("./assets/backward-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+}
+
+.product-type {
+    font-size: 16px;
+    color: #000000;
+}
+
+.share-button{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    background-image: url("./assets/icon-share.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+    cursor: pointer;
+}
+
+
+.card-image img{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card-content{
+    width: 85%;
+    margin: 0 auto;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid lightgray;
+}
+.card-content-title h1{
+    font-size: 25px;
+    text-align: center;
+    padding:5px 0;
+}
+
+.card-content-title{
+    margin-bottom: 8px;
+}
+
+.card-content-review{
+    margin-right: 10px;
+}
+.card-content-review::before{
+    content:'';/*가상요소의 필수 attr*/
+    position:relative;/*인라인블록때매약간의오차, 다른 요소에 영향 안미치면셔 */
+    top:2px;/*옮길정도 설정 위에로부터 2px 떨어지도록하기*/
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("./assets/icon-orangestar.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+}
+
+.card-content-review a{
+    border: 1px solid red;
+    text-decoration: none;
+}
+
+.card-content-likes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-content-likes .like-button{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    background-image: url("./assets/icon-favorite.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+.card-content-rate{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-page-ticketinfo{
+    border:1px solid steelblue;
+    padding: 10px;
+}
+.product-page-price{
+    padding: 5px;
+    background-color: #f6f6f6;
+}
+
+.card-content-schedule{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 0;
+}
+
+.card-content-schedule .place a{
+    text-decoration: none;
+    border:1px solid red;
+}
+
+.card-detail-top{
+    width: 85%;
+    margin: 0 auto;
+    padding: 8px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.card-detail-top dt {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    float: left;
+    line-height: 35px;
+}
+
+.card-detail-top dd{
+    font-size: 15px;
+    color: #333;
+    clear: right;
+    margin: 0 0 3px 86px;
+    line-height: 35px;
+    position: relative;
+}
+
+.card-detail-bottom{
+    width: 85%;
+    margin: 0 auto;
+    padding: 8px 0;
+    border-bottom: 1px solid lightgray;
+}
+.card-detail-bottom dt{
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    line-height: 35px;
+}
+.card-detail-bottom dd{
+    margin-left: 2px;
+    color: #333;
+    line-height: 23px;
+    font-size: 14px;
+}
+
