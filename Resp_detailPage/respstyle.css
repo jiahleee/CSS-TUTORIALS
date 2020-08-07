@@ -11,7 +11,6 @@ body{
 /*reset*/
 
 p{
-    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -42,6 +41,9 @@ button,input,textarea{
     font-family: "DM Sans",sans-serif;
 }
 
+.col-12{
+    margin-bottom: 15px;
+}
 
 /*Landing*/
 
@@ -216,9 +218,6 @@ button,input,textarea{
 }
 
 /* Ticketing */
-.ticketing{
-    padding:15px 0;
-}
 
 .ticketing .col-12{
     margin-bottom: 10px;
@@ -356,7 +355,7 @@ button,input,textarea{
 /* refund */
 
 .refund .refund-table table {
-    /*width: 100%;*/
+    width: 100%;
     border: 1px solid #444444;
     border-collapse: collapse;
 }
@@ -365,7 +364,12 @@ button,input,textarea{
     border: 1px solid #444444;
 }
 
-
+.refund .refund-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+}
 /* Map */
 
 .map{
@@ -383,23 +387,136 @@ button,input,textarea{
     height: 400px;
 }
 
-/*
-.map .map-title::before {
-    content: '';
-    position: relative;
-    !* top: 3px; *!
+
+/* Review */
+
+.review .review-title{
+    border-bottom: 3px solid #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 8px 0;
+}
+
+.review .review-title i{
+    size: 16px;
+}
+
+.review .review-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review .review-desc p{
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+.review .review-desc .caution-red{
+    color: red;
+}
+
+.review .review-register{
+    width: 100%;
+    height: auto;
+    padding: 8px 20px;
+    border:1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.review .review-register .desk-only{
+    display: none;
+}
+
+.review .review-register .star::before {
+    content:'';/*가상요소의 필수 attr*/
+    position:relative;/*인라인블록때매약간의오차, 다른 요소에 영향 안미치면셔 */
+    /*top:3px;*//*옮길정도 설정 위에로부터 2px 떨어지도록하기*/
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url(./assets/icon-orangestar.svg);
+    width: 13px;
+    height: 13px;
+    background-image: url("./assets/icon-orangestar.svg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size:contain;
     margin-right: 5px;
 }
-*/
+
+.review .review-comment-star{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
 
 
+.review .review-comment-star span{
+    margin-right: 8px;
+}
+
+
+
+
+.review .review-comments-list li{
+    padding: 0 8px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.review .review-comments-list li:last-child{
+    margin-bottom: 0;
+}
+
+.review .review-comment-star span{
+    position: relative;
+}
+
+.review .review-comment-star span:nth-child(2)::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 12px;
+    color: #7d858f;
+    background: #7d858f;
+    position: absolute;
+    top: 3px;
+    left: -4px;
+}
+
+.review .review-comment-star span:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review .review-comment-star span:last-child img{
+    width: 13px;
+    height: 13px;
+}
+
+.review .review-pagination{
+    padding: 0 15px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*.review .review-comment-star span:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
 
 
 
