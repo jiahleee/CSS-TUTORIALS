@@ -57,6 +57,10 @@ button,input,textarea{
 
 }
 
+.landing-content .landing-place i{
+    color: orange;
+}
+
 .landing-category{
     display: block;
     margin-bottom: 15px;
@@ -288,6 +292,117 @@ button,input,textarea{
     color: #ec7d2c;
     font-size: 15px;
 }
+
+.booking .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.booking .booking-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color:#ffffff;
+    background-color: red;
+    margin-right: 8px;
+}
+
+.booking .booking-button-invert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color:red;
+    background-color: #ffffff;
+    border: 1px solid red;
+    margin-left: 8px;
+}
+
+
+/* Caution */
+
+.caution{
+    text-align: center;
+}
+.caution .caution-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: inherit;
+    margin-bottom: 18px;
+}
+
+.caution .caution-desc{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.detail .detail-image img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* refund */
+
+.refund .refund-table table {
+    /*width: 100%;*/
+    border: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+.refund .refund-table th, td {
+    border: 1px solid #444444;
+}
+
+
+/* Map */
+
+.map{
+    padding:20px 0;
+    text-align: center;
+}
+.map .map-title i{
+    color: orange;
+}
+
+.map .map-desc{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+}
+
+/*
+.map .map-title::before {
+    content: '';
+    position: relative;
+    !* top: 3px; *!
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(./assets/icon-orangestar.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: 5px;
+}
+*/
+
+
+
+
+
 @media screen and (min-width: 768px){
     /*Reset CSS*/
 
