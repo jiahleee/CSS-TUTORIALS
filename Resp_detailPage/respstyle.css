@@ -120,7 +120,8 @@ button,input,textarea{
     display: block;
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 15px;
+
 
 }
 
@@ -189,6 +190,10 @@ button,input,textarea{
     line-height: 35px;
 }
 
+.main .main-price{
+    padding: 10px 10px;
+    background-color: #f6f6f6;
+}
 .main .main-detail-top dd{
     font-size: 15px;
     color: #333;
@@ -202,7 +207,7 @@ button,input,textarea{
     width: 100%;
     margin: 0 auto;
     padding: 8px 0;
-    border-bottom: 1px solid lightgray;
+
 }
 .main .main-detail-bottom dt{
     font-size: 15px;
@@ -211,6 +216,7 @@ button,input,textarea{
     line-height: 35px;
 }
 .main .main-detail-bottom dd{
+    margin-bottom: 10px;
     margin-left: 2px;
     color: #333;
     line-height: 23px;
@@ -219,20 +225,22 @@ button,input,textarea{
 
 /* Ticketing */
 
-.ticketing .col-12{
-    margin-bottom: 10px;
-}
+
 
 
 .ticketing .ticketing-title{
+
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    border-bottom:  1px solid lightgray;
     margin-bottom: 8px;
-    padding-bottom: 7px;
+    padding: 12px 0;
 }
 
+
+.ticketing .ticketing-button:nth-child(1){
+    margin-bottom: 10px;
+}
 
 /*달력 api*/
 .ticketing .datepicker{
@@ -252,7 +260,7 @@ button,input,textarea{
     justify-content: center;
     align-items: center;
     width: 140px;
-    height: 48px;
+    height: 35px;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: -0.05em;
@@ -264,11 +272,9 @@ button,input,textarea{
 .ticketing-seat{
     border: 1px solid lightgray;
    padding: 10px 15px;
+    margin: 15px 0;
 }
 
-.ticketing-seat-list{
-
-}
 
 .ticketing .ticketing-seat-list dt {
     font-size: 15px;
@@ -337,7 +343,7 @@ button,input,textarea{
     font-size: 20px;
     font-weight: 700;
     color: inherit;
-    margin-bottom: 18px;
+    margin: 18px 0;
 }
 
 .caution .caution-desc{
@@ -364,20 +370,32 @@ button,input,textarea{
     border: 1px solid #444444;
 }
 
+.refund .refund-desc p{
+    margin-bottom: 12px;
+}
+
+.refund .refund-detail-table{
+    margin-bottom: 12px;
+}
+
+
 .refund .refund-desc{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 12px;
+    font-size: 13px;
+    line-height: 1.8;
 }
 /* Map */
 
 .map{
-    padding:20px 0;
+
     text-align: center;
 }
 .map .map-title i{
     color: orange;
+    margin-bottom: 15px;
 }
 
 .map .map-desc{
@@ -391,8 +409,8 @@ button,input,textarea{
 /* Review */
 
 .review .review-title{
-    border-bottom: 3px solid #333;
-    font-size: 20px;
+    border-bottom: 1px solid lightgray;
+    font-size: 18px;
     margin-bottom: 20px;
     padding: 8px 0;
 }
@@ -417,6 +435,17 @@ button,input,textarea{
 .review .review-desc .caution-red{
     color: red;
 }
+
+.review .review-comment-desc span{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.review .review-comment-badge{
+    margin-bottom: 8px;
+}
+
+
 
 .review .review-register{
     width: 100%;
@@ -455,23 +484,57 @@ button,input,textarea{
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
+    padding-bottom:8px;
     border-bottom: 1px solid lightgray;
 }
 
 
 .review .review-comment-star span{
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 
+.review .reservationbadge{
+    display: inline-block;
+    font-size: 11px;
+    border: 1px solid #ec7d2c;
+    border-radius: 30px;
+    color: #ec7d2c;
+    text-align: center;
+    width: 43px;
+    height: 17px;
 
+}
 
-.review .review-comments-list li{
-    padding: 0 8px;
+.review .writerself{
+    display: inline-block;
+    font-size: 11px;
+    border: 1px solid #0066ff;
+    border-radius: 30px;
+    color: #0066ff;
+    text-align: center;
+    width: 43px;
+    height: 17px;
+
+}
+
+.review .revision{
+    display: inline-block;
+    font-size: 11px;
+    border: 1px solid #333333;
+    border-radius: 30px;
+    color: #333;
+    text-align: center;
+    width: 35px;
+    height: 17px;
+}
+
+.review .review-comments-list li {
+    border-bottom: 1px solid lightgray;
+    padding: 8px;
     font-size: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
-
 .review .review-comments-list li:last-child{
     margin-bottom: 0;
 }
@@ -509,9 +572,36 @@ button,input,textarea{
     flex-direction:row;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+}
+
+.review .review-comment-like{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.review .review-comment-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
+.review .like-button{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    background-image: url("./assets/icon-favorite.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    cursor: pointer;
+    padding-left: 0;
+}
 /*.review .review-comment-star span:last-child{
     display: flex;
     justify-content: center;
@@ -524,7 +614,70 @@ button,input,textarea{
     /*Reset CSS*/
 
 
-    /* Main */
+    /* landing */
+
+.landing .col-12{
+    padding-top: 15px;
+    border-bottom: 2px solid #333;
+}
+.landing .landing-content .landing-category{
+    font-size: 16px;
+}
+.landing .landing-title{
+    font-size: 35px;
+    line-height: 1.14285714;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+}
+
+.landing .landing-dateplace{
+    margin: 23px 0 21px 0;
+}
+
+.landing .landing-dateplace{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.landing .landing-date{
+    padding-right: 15px;
+}
+
+
+/*main*/
+
+ .main .main-image img{
+     margin-bottom: 0;
+ }
+ .main .col-md-5 {
+     border-bottom: 1px solid lightgray;
+ }
+ .main .main-rate{
+     justify-content: space-between;
+     width: inherit;
+     height: 60px;
+ }
+
+ .main .like-button{
+     background-size: 32px 25px;
+ }
+
+ .main .main-detail-top{
+     padding-bottom: 20px;
+     border-top: none;
+     border-bottom: 1px solid black;
+     font-size: 15px;
+     color: #333;
+     line-height: 2.916;
+ }
+
+ .main .main-detail-bottom{
+     min-height: 174px;
+     border-bottom: 1px solid #000;
+     padding: 20px 0;
+ }
 
 
 }
