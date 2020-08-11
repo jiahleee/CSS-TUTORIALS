@@ -15,23 +15,45 @@
         <div class="row">
             <div class="col-12">
                <div class="landing-content">
-                   <a href="#" class="landing-category">
+
+                   <a href="#map" class="landing-category">
                        <span>콘서트</span>><span>국내뮤지션</span>
                    </a>
-                   <h1 class="landing-title">
-                       [부산] 팬텀싱어3 콘서트
-                   </h1>
 
-                   <div class="landing-dateplace">
+                   <div class="landing-info">
+
+                       <h1 class="landing-title">
+                           [부산] 팬텀싱어3 콘서트
+                       </h1>
                        <strong class="landing-date">
                            2020.08.28~2020.09.27
                        </strong>
-                       <a href="#" class="landing-place">
+                       <a href="#map" class="landing-place">
                            <i class="fas fa-map-marker-alt"></i>
                            부산 벡스코 제 1전시장 1홀
                        </a>
-                       <button type="button" class="share-button" aria-label="Share this product"></button>
+
                    </div>
+
+                   <div class="landing-share">
+
+                       <button type="button" class="share-button" id="shareButton" aria-label="Share this product"></button>
+
+                       <div class="share-box show">
+                           <a href="#">
+                               <i class="fab fa-facebook"></i>
+                           </a>
+                           <a href="#">
+                               <i class="fab fa-twitter-square"></i>
+                           </a>
+                           <a href="#">
+                               <i class="fab fa-instagram"></i>
+                           </a>
+                           <button type="button" class="share-button" id="close-button" aria-label="Share this product"></button>
+                       </div>
+
+                   </div>
+
                </div>
             </div>
         </div>
@@ -48,13 +70,14 @@
 
                 <div class="main-rate">
                     <div class="main-likes">
-                        <button type="button" class="like-button" aria-label="Like this property"></button>
+                        <i class="far fa-heart noncolored-heart"></i>
+                        <i class="fas fa-heart colored-heart"></i>
                         <strong class="main-likes-number">
                             118
                         </strong>
                     </div>
                     <div class="main-reviews">
-                        <a href="#" class="main-review-link">
+                        <a href="#review" class="main-review-link">
                             <strong>
                                 4.94
                             </strong>
@@ -118,23 +141,28 @@
     <div class="container">
         <div class="row">
             <!--달력-->
-            <div class="col-12 col-md-4">
-                <h2 class="ticketing-title">날짜/시간 선택</h2>
-                <div class="datepicker">
-
+            <div class="col-12 col-md-7">
+                <div class="ticketing-choice">
+                <h2>날짜/시간 선택</h2>
+                </div>
+                <div class="ticketing-desc">
+                    <div class="datepicker">
+                    </div>
+                    <div class="ticketing-detailtime">
+                        <!--회차정보-->
+                        <a href="#" class="ticketing-button">
+                            <span>1회</span>
+                            오후 7시 00분
+                        </a>
+                       <!-- <a href="#" class="ticketing-button">
+                            <span>2회</span>
+                            오후 9시 00분
+                        </a>-->
+                    </div>
                 </div>
             </div>
-            <!--회차정보-->
-            <div class="col-12 col-md-3">
-                <a href="#" class="ticketing-button">
-                    <span>1회</span>
-                     오후 7시 00분
-                </a>
-                <a href="#" class="ticketing-button">
-                    <span>2회</span>
-                    오후 9시 00분
-                </a>
-            </div>
+
+
             <!--예매가능좌석-->
             <div class="col-12 col-md-5">
                 <h2 class="ticketing-title">예매 가능 좌석</h2>
@@ -166,6 +194,19 @@
         <div class="col-12">
             <a href="#" class="booking-button">예매하기</a>
             <a href="#" class="booking-button-invert">Booking</a>
+        </div>
+    </div>
+</div>
+</section>
+<section class="maincategory">
+<div class="container">
+    <div class="row">
+        <div class="col-12"> <!--선택된 배너에 orange 효과주기-->
+            <div class="mainlinks">
+            <a href="#" ><span>상세정보</span></a>
+            <a href="#" ><span>관람후기</span></a>
+            <a href="#" ><span>예매/취소안내</span></a>
+            </div>
         </div>
     </div>
 </div>
@@ -283,7 +324,7 @@
         </div>
     </div>
 </section>
-<section class="map">
+<section class="map" id="map">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -298,7 +339,7 @@
         </div>
     </div>
 </section>
-<section class="review">
+<section class="review" id="review">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -661,5 +702,60 @@
         </div>
     </div>
 </section>
+<section class="notice">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="info-1">
+                    <div class="info-1-title">
+                       <h2> 예매 </h2>
+                    </div>
+                    <div class="info-1-desc">
+                        <p>
+                            예매는 PC, 모바일, 고객센터 를 통해 신용카드, 가상계좌(무통장 입금), YES머니, YES상품권, 예치금 등으로 예매하실 수 있습니다.
+                            <br>
+                            (단, 상품마다 사용 가능한 결제 수단이 다르게 적용될 수 있으니 상품 상세페이지 안내 사항을 확인해주세요.)
+                            <br>
+                            무통장입금 결제 선택 시 입금 마감시간은 예매일 익일 밤 11시 29분까지
+                            입니다. 입금 마감시간 내 미입금 된 경우 예매가 자동 취소됩니다.
+                            <br>
+                            (단, 상품에 따라 예매 당일 밤 11시 29분에 마감되는 경우가 있으니 예매 전후 반드시 확인해주시기 바랍니다.)
+                            <br>
+                            예매수수료는 다음과 같습니다.
+                        </p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>장르</th>
+                                    <th>pc/모바일</th>
+                                    <th>전화예매</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>콘서트,뮤지컬,클래식,국악,무용</td>
+                                    <td>장당 1,000원</td>
+                                    <td rowspan="3">장당 2,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>연극,전시</td>
+                                    <td>장당 500원</td>
+                                </tr>
+                                <tr>
+                                    <td>체험,행사</td>
+                                    <td>장당 300원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<button type="button" class="return-top-button" aria-label="Back to top">
+    <img src="./assets/curvey.jpg" alt="">
+</button>
+<script src="./detailpage.js"></script>
 </body>
 </html>
