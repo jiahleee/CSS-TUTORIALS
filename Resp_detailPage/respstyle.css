@@ -31,6 +31,10 @@ body{
     background-color: #ec7d2c;
     opacity: 100%;
 }
+
+
+
+
 /*reset*/
 
 p{
@@ -64,15 +68,14 @@ button,input,textarea{
     font-family: "DM Sans",sans-serif;
 }
 
-.col-12{
+/*.col-12{
     margin-bottom: 15px;
-}
+}*/
 
 /*Landing*/
 
 .landing{
-    padding: 15px 0;
-   /* border-bottom:1px solid lightgray;*/
+    padding:0;
 }
 
 .landing .landing-info{
@@ -80,6 +83,10 @@ button,input,textarea{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.landing .landing-content{
+    padding: 15px 5px 0;
 }
 
 .landing-category::before{
@@ -98,11 +105,17 @@ button,input,textarea{
 .landing-content a{
     display: block;
 }
-.landing-category, .landing-info, .landing-share {
+.landing-category, .landing-info {
     margin-bottom: 10px;
 }
 
-.landing .landing-info h1,strong,a{
+.landing .landing-info h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.landing .landing-info strong {
+
     margin-bottom: 10px;
 }
 
@@ -127,7 +140,6 @@ button,input,textarea{
     align-items: center;
 }
 
-
 .landing .show{
     display: flex;
     justify-content: center;
@@ -148,7 +160,7 @@ button,input,textarea{
     margin-bottom: 0;
 }
 
-.share-box i{
+.share-box i, .show i{
     color: #333333;
     font-size: 25px;
 }
@@ -220,6 +232,12 @@ button,input,textarea{
 
 /* Main */
 
+.main{
+    padding-top: 10px;
+}
+
+
+
 .main-image img{
 
     display: block;
@@ -263,6 +281,7 @@ button,input,textarea{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 15px;
 }
 .main .main-likes{
     display: flex;
@@ -294,7 +313,7 @@ button,input,textarea{
 .main .main-detail-top{
     width: 100%;
     margin: 0 auto;
-    padding: 8px 0;
+    padding: 10px 0;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
@@ -322,7 +341,8 @@ button,input,textarea{
 .main .main-detail-bottom{
     width: 100%;
     margin: 0 auto;
-    padding: 8px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
 
 }
 .main .main-detail-bottom dt{
@@ -342,27 +362,25 @@ button,input,textarea{
 /* Ticketing */
 
 
-
-
 .ticketing .ticketing-choice h2{
 
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
-    margin-bottom: 8px;
-    padding: 12px 0;
+    padding: 15px 0;
 }
 
 .ticketing .ticketing-desc{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    border-bottom: 1px solid lightgray;
 }
 
 
-.ticketing .ticketing-button:nth-child(1){
-    margin-bottom: 10px;
+.ticketing .ticketing-button:last-child{
+    margin-bottom: 15px;
 }
 
 /*달력 api*/
@@ -393,6 +411,13 @@ button,input,textarea{
 
 }
 
+.ticketing .col-md-5{
+    padding: 15px;
+}
+
+.ticketing .ticketing-title {
+    font-size: 16px;
+}
 
 
 .ticketing-seat{
@@ -427,6 +452,12 @@ button,input,textarea{
 
 
 /*booking*/
+
+.booking{
+    margin-bottom: 30px;
+}
+
+
 .booking .col-12{
     display: flex;
     justify-content: center;
@@ -474,14 +505,13 @@ button,input,textarea{
 }*/
 
 .maincategory .mainlinks{
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
     font-weight: 700;
-    padding: 0 10px;
-    height: 60px;
+    font-size: 14px;
+    height: 40px;
 }
 
 
@@ -491,17 +521,30 @@ button,input,textarea{
 .caution{
     text-align: center;
 }
+
+.caution .col-12{
+    margin: 20px 0;
+}
+
 .caution .caution-title{
     font-size: 20px;
     font-weight: 700;
     color: inherit;
-    margin: 18px 0;
+   margin-bottom: 18px;
 }
 
 .caution .caution-desc{
     font-size: 13px;
     font-weight: 400;
 }
+
+
+/*detail*/
+
+.detail{
+    margin-bottom: 30px;
+}
+
 
 .detail .detail-image img{
     display: block;
@@ -511,6 +554,11 @@ button,input,textarea{
 }
 
 /* refund */
+
+.refund{
+    margin-bottom: 30px;
+}
+
 
 .refund .refund-table table {
     width: 100%;
@@ -542,7 +590,7 @@ button,input,textarea{
 /* Map */
 
 .map{
-
+    margin-bottom: 30px;
     text-align: center;
 }
 .map .map-title i{
@@ -580,7 +628,7 @@ button,input,textarea{
 
 .review .review-desc p{
     font-size: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 
@@ -632,6 +680,7 @@ button,input,textarea{
 
 .review .review-comment-star{
     display: flex;
+
     justify-content: flex-start;
     align-items: center;
     text-align: center;
@@ -685,11 +734,11 @@ button,input,textarea{
     border-bottom: 1px solid lightgray;
     padding: 8px;
     font-size: 13px;
-    margin-bottom: 10px;
+    margin:30px 0;
 }
-.review .review-comments-list li:last-child{
+/*.review .review-comments-list li:last-child{
     margin-bottom: 0;
-}
+}*/
 
 .review .review-comment-star span{
     position: relative;
@@ -769,14 +818,16 @@ button,input,textarea{
     align-items: center;
     font-size: 13px;
     padding: 15px 10px;
-    border: 1px solid #444444;
+    border: 1px solid lightgray;
+    margin-top: 50px;
 }
 
 .info01 .info-1-title{
     height: 40px;
+    margin-bottom: 20px;
 }
 .notice .info-1-desc p{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .notice .info-1-desc table {
@@ -786,100 +837,252 @@ button,input,textarea{
     text-align: center;
 
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     /*Reset CSS*/
-
-
     /* landing */
+    /*.landing .col-12{
+        padding-top: 15px;
+        border-bottom: 2px solid #333;
+    }
+    .landing .landing-content .landing-category{
+        font-size: 16px;
+    }
+    .landing .landing-title{
+        font-size: 35px;
+        line-height: 1.14285714;
+        font-weight: 700;
+        letter-spacing: -0.003em;
+    }
 
-/*.landing .col-12{
-    padding-top: 15px;
-    border-bottom: 2px solid #333;
-}
-.landing .landing-content .landing-category{
-    font-size: 16px;
-}
-.landing .landing-title{
-    font-size: 35px;
-    line-height: 1.14285714;
-    font-weight: 700;
-    letter-spacing: -0.003em;
-}
+    .landing .landing-dateplace{
+        margin: 23px 0 21px 0;
+    }
 
-.landing .landing-dateplace{
-    margin: 23px 0 21px 0;
-}
+    .landing .landing-dateplace{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 
-.landing .landing-dateplace{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.landing .landing-date{
-    padding-right: 15px;
-}*/
-
-    .share-box i{
+    .landing .landing-date{
+        padding-right: 15px;
+    }*/
+    .share-box i {
         color: #333333;
         font-size: 30px;
     }
 
-/*main*/
-
- .main .main-image img{
-     margin-bottom: 0;
- }
- .main .col-md-5 {
-     border-bottom: 1px solid lightgray;
- }
- .main .main-rate{
-     justify-content: space-between;
-     width: inherit;
-     height: 60px;
- }
-
- .main .like-button{
-     background-size: 32px 25px;
- }
-
- .main .main-detail-top{
-     padding-bottom: 20px;
-     border-top: none;
-     border-bottom: 1px solid black;
-     font-size: 15px;
-     color: #333;
-     line-height: 2.916;
- }
-
- .main .main-detail-bottom{
-     min-height: 174px;
-     border-bottom: 1px solid #000;
-     padding: 20px 0;
- }
-
- /*ticketing*/
-
-  .ticketing .col-md-7{
-      border:1px solid #333;
-  }
-
-    .ticketing .col-md-5{
-        border:1px solid #333;
+    .landing .landing-share {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
     }
 
-  .ticketing .ticketing-desc{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-  }
+    .landing .landing-content {
+        padding: 15px 0;
+    }
 
-  .ticketing .datepicker{
-      margin-right: 20px;
-  }
+    /*main*/
+    .main {
+        padding-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    .main .main-image img {
+        margin-bottom: 0;
+    }
+
+    .main .col-md-5 {
+        border-bottom: 1px solid lightgray;
+    }
+
+    .main .main-rate {
+        width: inherit;
+        height: 40px;
+        margin: 15px 0;
+    }
+
+    .main .like-button {
+        background-size: 32px 25px;
+    }
+
+    .main .main-detail-top {
+        padding-bottom: 20px;
+        border-top: none;
+        border-bottom: 1px solid black;
+        font-size: 15px;
+        color: #333;
+        line-height: 2.916;
+        padding-top: 0;
+    }
+
+    .main .main-detail-bottom {
+        min-height: 174px;
+        border-bottom: 1px solid #000;
+        padding: 20px 0;
+    }
+
+    /*ticketing*/
+    .ticketing {
+        margin-bottom: 50px;
+    }
+
+    .ticketing .col-md-7 {
+        border: 1px solid lightgray;
+    }
+
+    /*  .ticketing .col-md-5{
+          border:1px solid #333;
+      }*/
+    .ticketing .ticketing-choice {
+        border-bottom: 1px solid #444;
+    }
+
+    .ticketing .ticketing-choice h2 {
+        padding: 15px 0;
+    }
+
+    .ticketing .ticketing-desc {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 20px 0;
+    }
+
+    .ticketing .datepicker {
+        margin-bottom: 0;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    .ticketing .ticketing-detailtime {
+        padding: 20px 30px;
+    }
+
+    /*
+      .ticketing .datepicker::after{
+          content: '';
+          display: inline-block;
+          width: 1px;
+          height: 80px;
+          color: lightgray;
+          background: #7d858f;
+          position: absolute;
+          top: 3px;
+          left: -4px;
+
+      }*/
+    .ticketing .col-md-5 {
+        border-top: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .ticketing .ticketing-title {
+        padding: 15px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    /*booking*/
+    .booking {
+        margin-bottom: 50px;
+    }
+
+    /*maincategory*/
+    .maincategory .mainlinks {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid #444;
+    }
+
+    .maincategory .mainlinks a,
+    .maincategory .mainlinks span {
+        width: 150px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        margin-right: 15px;
+    }
+
+
+    .maincategory .mainlinks span {
+        cursor: pointer;
+    }
+
+    .maincategory .mainlinks span:hover {
+        border-top: 3px solid #ec7d2c;
+    }
+
+    .maincategory .mainlinks a:hover {
+        border-top: 3px solid #ec7d2c;
+    }
+
+
+    /*caution*/
+    .caution .col-12 {
+        margin: 70px 0;
+    }
+
+    /*detail*/
+    .detail .detail-image {
+        max-width: 960px;
+        height: auto;
+        margin: 0 auto;
+
+    }
+
+    /*refund*/
+    .refund .col-12 {
+        margin: 70px 0;
+    }
+
+    /*map*/
+    .map .col-12 {
+        margin-bottom: 50px;
+    }
+
+    .review .review-title {
+        font-size: 20px;
+    }
+
+    .review .review-desc {
+        display: initial;
+
+    }
+
+    /*.review .review-desc .review-register {
+        display: none;
+    }*/
 }
+
+    /*js css*/
+
+    .hide{
+        display: none;
+    }
+
+    .on{
+        border-top: 3px solid #ec7d2c;
+        padding:5px 0;
+    }
+
+    .return-top-button{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+    }
+
 
 
 
