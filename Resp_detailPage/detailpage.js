@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     addLikes();
     showShareBox();
     showcancel();
+    registerReview();
 
     const returnTopButton=document.querySelector(".return-top-button");
     returnTopButton.addEventListener("click",()=>{
@@ -136,7 +137,15 @@ const showcancel=()=> {
 }
 
 
-//maincategory 클릭 시 상단에 style
+/*//리뷰작성 버튼 클릭 시 보여줄 페이지 구현
 
+const registerReview=()=>{
+    const reviewOkButton=document.querySelector(".review-ok-button");
+    const modal=document.querySelector(".modal");
+    reviewOkButton.addEventListener("click",()=>{
+        modal.classList.remove("hide");
+        modal.classList.add("show");
+    });
+}*/
 
 

@@ -366,13 +366,11 @@
                             <dt>리뷰</dt>
                             <dd>108</dd>
                         </dl>
-                        <a href="#">
+                        <span class="review-ok-button">
                             리뷰작성
-                        </a>
-                        <a href="#" class="desk-only">
-                            <img src="./assets/btn-review.png" alt="관람후기등록버튼">
-                        </a>
+                        </span>
                     </div>
+                    
                 </div>
                 <div class="review-comments">
                     <ul class="review-comments-list">
@@ -753,12 +751,44 @@
         </div>
     </div>
 </section>
+<section class="modal hide">
+    <div class="modal-group">
+        <form class="modal-form">
+            <div class="modal-table">
+                <div class="modal-title">
+                    <p class="post-title">세상은 한 장의 손수건</p>
+                    <button type="button" class="close-button"><span>+</span></button>
+                </div>
+                <div class="row datestar">
+                    <div class="table-title">관람일시</div>
+                    <div class="table-content">관람 내역이 없습니다.</div>
+                </div>
+                <div class="row datestar">
+                    <div class="table-title">별점</div>
+                    <div class="table-content">
+                        <a href="#">★</a>
+                        <a href="#">★</a>
+                        <a href="#">★</a>
+                        <a href="#">★</a>
+                        <a href="#">★</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-title">관람후기</div>
+                    <div class="table-content">
+                        <textarea name="input-content" class="input-content" maxlength="2000" minlength="50" cols="30" rows="10" placeholder="내용을 작성해주세요.(최소 20byte/최대 2,000byte)"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="post-buttons">
+                <button type="submit" class="post-ok-button">등록</button>
+            </div>
+        </form>
+    </div>
+</section>
 <button type="button" class="return-top-button" aria-label="Back to top">
     <img src="./assets/curvey.jpg" alt="">
 </button>
-
-
-
 <script src="./detailpage.js"></script>
 </body>
 </html>

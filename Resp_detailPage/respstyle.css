@@ -658,11 +658,9 @@ button,input,textarea{
     text-align: center;
     font-size: 14px;
     margin-bottom: 15px;
+    position: relative;
 }
 
-.review .review-register .desk-only{
-    display: none;
-}
 
 .review .review-register .star::before {
     content:'';/*가상요소의 필수 attr*/
@@ -680,7 +678,6 @@ button,input,textarea{
 
 .review .review-comment-star{
     display: flex;
-
     justify-content: flex-start;
     align-items: center;
     text-align: center;
@@ -803,6 +800,10 @@ button,input,textarea{
     cursor: pointer;
     padding-left: 0;
 }
+
+.review .review-ok-button{
+    cursor: pointer;
+}
 /*.review .review-comment-star span:last-child{
     display: flex;
     justify-content: center;
@@ -837,6 +838,114 @@ button,input,textarea{
     text-align: center;
 
 }
+
+
+
+/*modal*/
+
+
+.modal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-group{
+    width: 100%;
+}
+
+.post-title{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.modal .modal-title .close-button {
+    transform: rotate(45deg);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    font-size: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+}
+
+.modal .modal-form .modal-table {
+    width: 100%; /*670px*/
+    margin: 0 auto;
+}
+
+.modal .modal-form .modal-table .table-title {
+    width: 20%;
+    margin-right: 2%;
+    font-weight: 700;
+
+}
+
+
+.modal .modal-form .modal-table .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+.modal .modal-form .modal-table .datestar {
+    height: 70px;
+}
+
+.modal .modal-form .modal-table .datestar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #ec7d2c;
+}
+
+.modal .modal-form .modal-table .table-content {
+    width: 75%;
+    margin: 10px 0;
+}
+
+.modal .modal-form .modal-table .table-content textarea {
+    width: 100%;
+    height: 200px;
+}
+
+
+.post-buttons {
+    width: 30%;
+    border: 1px solid #ec7d2c;
+    margin: 20px auto;
+
+}
+
+
+.post-buttons .post-ok-button {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #ec7d2c;
+    color: white;
+    border: 1px solid #ec7d2c;
+
+}
+
+
+
+
+
+
 @media screen and (min-width: 768px) {
     /*Reset CSS*/
     /* landing */
@@ -1061,7 +1170,119 @@ button,input,textarea{
     /*.review .review-desc .review-register {
         display: none;
     }*/
-}
+    /*modal*/
+
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 100;
+    }
+
+
+    .modal .modal-group {
+        width: 60%;
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 10px 50px;
+
+    }
+
+    .modal .modal-title .close-button {
+        transform: rotate(45deg);
+        cursor: pointer;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        font-size: 30px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: 0;
+    }
+
+    .modal .modal-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 700;
+        border-bottom: 1px solid black;
+    }
+
+
+    .modal .modal-form .modal-table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .modal .modal-form .modal-table .table-title {
+        width: 20%;
+        margin-right: 2%;
+        font-weight: 700;
+
+    }
+
+
+    .modal .modal-form .modal-table .row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid black;
+        font-size: 15px;
+    }
+
+    .modal .modal-form .modal-table .datestar {
+        height: 70px;
+    }
+
+    .modal .modal-form .modal-table .datestar a {
+        text-decoration: none;
+        font-size: 25px;
+        color: #ec7d2c;
+    }
+
+    .modal .modal-form .modal-table .table-content {
+        width: 75%;
+        margin: 10px 0;
+    }
+
+    .modal .modal-form .modal-table .table-content textarea {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .post-buttons {
+        width: 30%;
+        border: 1px solid #ec7d2c;
+        margin: 20px auto;
+
+    }
+
+
+    .post-buttons .post-ok-button {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: #ec7d2c;
+        color: white;
+        border: 1px solid #ec7d2c;
+
+    }
+
+
+
+}/*end of mediaQuery*/
+
 
     /*js css*/
 
@@ -1081,6 +1302,10 @@ button,input,textarea{
         width: 50px;
         height: 50px;
         border-radius: 0;
+    }
+
+    .show{
+        display: flex;
     }
 
 
