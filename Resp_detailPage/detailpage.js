@@ -177,56 +177,63 @@ const starRate=()=> {
     stars.forEach(item=>{item.classList.add("staron")
     });//초기 모든 별 꽉차게
 
-
-   /* for (i=0; i<stars.length; i++) {
-        const prev = stars[i].previousElementSibling;
-        if (prev.classList.contains("sub-block-container")) {
-            prev.style.borderBottom = "none";
-        }
-    }
-
-
-    var elem = document.getElementsByClassName("q-block-container");
-    for (i=0; i<elem.length; i++) {
-        var prev = elem[i].previousElementSibling;
-        if (prev.classList.contains("sub-block-container")) {
-            prev.style.borderBottom = "none";
-        }
-    }
-
-
-    const prevAll=(array)=>{
-        var result = [];
-        for (i=0; i<array.length; i++) {
-        while (array[i].previousElementSibling)
-            result.push();
-        return result;
-    }*/
     stars[0].addEventListener("click",()=>{
-        stars[1].classList.remove("staron");
-        stars[2].classList.remove("staron");
-        stars[3].classList.remove("staron");
-        stars[4].classList.remove("staron");
-        star.value=1;
-    });
-    stars[1].addEventListener("click",()=>{
-        stars[2].classList.remove("staron");
-        stars[3].classList.remove("staron");
-        stars[4].classList.remove("staron");
-        star.value=2;
-    })
-    stars[2].addEventListener("click",()=>{
-        stars[3].classList.remove("staron");
-        stars[4].classList.remove("staron");
-        star.value=3;
-    })
-    stars[3].addEventListener("click",()=>{
-        stars[4].classList.remove("staron");
-        star.value=4;
-    })
-    /*stars[4].addEventListener("click",()=>{
-        star.value=5;
-    })*/
+        stars.forEach(item=>{
+            item.classList.remove("staron")
+        });//모든 별 색 없어지게
 
+        for(i=0;i<1;i++){
+            stars[i].classList.add("staron");
+        }
+        star.value = 1; //1점 부여
+        console.log(star.value);
+
+    });
+
+    stars[1].addEventListener("click",()=>{
+        stars.forEach(item=>{
+            item.classList.remove("staron")
+        });//모든 별 색 없어지게
+
+        for(i=0;i<2;i++){
+            stars[i].classList.add("staron");
+        }
+        star.value = 2; //2점 부여
+    });
+
+    stars[2].addEventListener("click",()=>{
+        stars.forEach(item=>{
+            item.classList.remove("staron")
+        });//모든 별 색 없어지게
+
+        for(i=0;i<3;i++){
+            stars[i].classList.add("staron");
+        }
+
+        star.value = 3; //3점 부여
+    });
+
+    stars[3].addEventListener("click",()=>{
+        stars.forEach(item=>{
+            item.classList.remove("staron")
+        });//모든 별 색 없어지게
+
+        for(i=0;i<4;i++){
+            stars[i].classList.add("staron");
+        }
+
+        star.value = 4; //4점 부여
+    });
+
+    stars[4].addEventListener("click",()=>{
+        stars.forEach(item=>{
+            item.classList.remove("staron")
+        });//모든 별 색 없어지게
+
+        for(i=0;i<5;i++){
+            stars[i].classList.add("staron");
+        }
+        star.value = 5; //5점 부여
+    });
 }
 
