@@ -689,8 +689,9 @@ button,input,textarea{
 }
 
 
-.review .review-comment-star span{
+.review .review-comment-star .reviewer{
     margin-right: 10px;
+    position: relative;
 }
 
 
@@ -739,11 +740,10 @@ button,input,textarea{
     margin-bottom: 0;
 }*/
 
-.review .review-comment-star span{
-    position: relative;
-}
 
-.review .review-comment-star span:nth-child(2)::before {
+.review .review-comment-star span:nth-child(2)::before,
+.review .review-comment-star span:nth-child(3)::before
+{
     content: '';
     display: block;
     width: 1px;
@@ -761,9 +761,8 @@ button,input,textarea{
     align-items: center;
 }
 
-.review .review-comment-star span:last-child img{
-    width: 13px;
-    height: 13px;
+.review .review-comment-star .reviewer i{
+   font-size: 13px;
 }
 
 .review .review-pagination{
@@ -844,6 +843,7 @@ button,input,textarea{
 
 /*modal*/
 
+/*revision 같이 쓸 수 있나..? 리뷰 등록 폼 그대로 ? */
 
 .modal{
     position: absolute;
@@ -867,7 +867,7 @@ button,input,textarea{
     margin-bottom: 0;
 }
 
-.modal-group{
+.modal-group {
     width: 100%;
 }
 
@@ -886,19 +886,22 @@ button,input,textarea{
     outline: 0;
 }
 
-.modal .modal-form .modal-table {
+.modal .modal-form .modal-table
+{
     width: 100%; /*670px*/
     margin: 0 auto;
 }
 
-.modal .modal-form .modal-table .table-title {
+.modal .modal-form .modal-table .table-title
+{
     width: 20%;
     margin-right: 2%;
     font-weight: 700;
 }
 
 
-.modal .modal-form .modal-table .row {
+.modal .modal-form .modal-table .row
+{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -907,18 +910,21 @@ button,input,textarea{
     padding: 0 15px;
 }
 
-.modal .modal-form .modal-table .datestar {
+.modal .modal-form .modal-table .datestar
+{
     height: 70px;
 }
 
 
-.modal .modal-form .modal-table .datestar i {
+.modal .modal-form .modal-table .datestar i
+{
     font-size: 25px;
     color: #333333;
 }
 
 
-.modal .modal-form .modal-table .datestar .staron{
+.modal .modal-form .modal-table .datestar .staron
+{
     color:#ec7d2c;
 }
 

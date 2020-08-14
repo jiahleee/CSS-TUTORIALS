@@ -6,6 +6,9 @@ window.addEventListener('DOMContentLoaded',()=>{
     registerReview();
     closeReview();
     starRate();
+    /*showRevision();*/
+    /*stargrades();*/
+   /* closeRevision();*/
 
     const returnTopButton=document.querySelector(".return-top-button");
     returnTopButton.addEventListener("click",()=>{
@@ -14,7 +17,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 });
 
-//좋아요 버튼
+//좋아요 버튼 (main, review 둘 다)
 const addLikes=()=>{
 
     const noncoloredHeart=document.querySelectorAll(".noncolored-heart");
@@ -58,20 +61,6 @@ const addLikes=()=>{
     }
 
 
-  /*  coloredHeart.addEventListener("click",()=>{
-
-        noncoloredHeart.style.display = "initial";
-        coloredHeart.style.display="none";
-
-        /!*누르면 숫자 -1*!/
-        let count=Number(likesNumber.textContent);
-        likesNumber.textContent=count-1;
-
-    });*/
-
-
-
-
 //공유 sns 채널 박스
 const showShareBox=()=>{
 
@@ -96,6 +85,10 @@ const showShareBox=()=>{
 
 
 //예매하기/booking 버튼 누르면 티켓예매 페이지로 이동
+
+
+
+
 //예매/취소안내 이동시 보여질 section 고르기
 
 const showcancel=()=> {
@@ -162,7 +155,7 @@ const showcancel=()=> {
 }
 
 
-//리뷰작성 버튼 클릭 시 보여줄 페이지 구현
+//리뷰작성 버튼 클릭 시 페이지 보이게
 
 const registerReview=()=>{
     const reviewOkButton=document.querySelector(".review-ok-button");
@@ -172,6 +165,7 @@ const registerReview=()=>{
         modal.classList.add("show");
     });
 }
+
 
 
 //닫기버튼
@@ -186,9 +180,9 @@ const closeReview=()=>{
 
 }
 
-//별점주기
+//리뷰 작성 시 별점주기
 
-// 초기 별점셋팅
+    // 초기 별점셋팅
 const starRate=()=> {
 
     const star = document.querySelector("#star");
@@ -259,5 +253,64 @@ const starRate=()=> {
         star.value = 5; //5점 부여
     });
 }
+
+
+
+
+
+
+
+
+
+//별점 보여주기
+//여러 개로 불러오면 어떡 하나...?
+
+/*const stargrades=()=>{
+
+    //리뷰 작성 시 주었던 hidden input의 value 별점 불러오기
+    const rate = document.querySelector("#star").value;
+    const stars=document.querySelectorAll(".reviewstar");
+
+    for(i=0;i<rate;i++){
+        stars[i].classList.add("staron");
+    }
+
+}*/
+
+
+//수정 버튼 누를 때 페이지
+
+/*
+const showRevision=()=>{
+    const revisionbutton=document.querySelectorAll(".revisionButton");
+    const modal=document.querySelector(".modal");
+    const reviewcomment=document.querySelectorAll(".review-comment-desc p");
+
+
+
+    for(i=0;i<revisionbutton.length;i++) {
+        revisionbutton[i].addEventListener("click", () => {
+            //리뷰작성 페이지와 같은 페이지가 나타남.
+            modal.classList.remove("hide");
+            modal.classList.add("show");
+            console.log(reviewcomment[i].textContent);
+        });
+    }
+}
+
+//수정 닫기 버튼
+
+const closeRevision=()=>{
+    const closeButton=document.querySelector(".close-revision-button");
+    const modal=document.querySelector(".revision");
+    closeButton.addEventListener("click",()=>{
+        modal.classList.remove("show");
+        modal.classList.add("hide");
+    })
+
+}
+*/
+
+
 
 
