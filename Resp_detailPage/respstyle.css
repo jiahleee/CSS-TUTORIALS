@@ -252,7 +252,7 @@ button,input,textarea{
     justify-content: center;
     align-items: center;
 }
-.main .noncolored-heart{
+ .noncolored-heart{
   /* !* width: 34px;
     height: 34px;
     border-radius: 50%;*!
@@ -269,8 +269,8 @@ button,input,textarea{
     margin-right: 8px;
 }
 
-.main .colored-heart{
-    display: none;
+ .colored-heart{
+
     cursor:pointer;
     size: 15px;
     color: orange;
@@ -789,7 +789,7 @@ button,input,textarea{
 
 }
 
-.review .like-button{
+/*.review .like-button{
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -801,8 +801,7 @@ button,input,textarea{
     background-size: 20px 20px;
     cursor: pointer;
     padding-left: 0;
-}
-
+}*/
 .review .review-ok-button{
     cursor: pointer;
 }

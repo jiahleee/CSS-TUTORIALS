@@ -17,33 +17,59 @@ window.addEventListener('DOMContentLoaded',()=>{
 //좋아요 버튼
 const addLikes=()=>{
 
-    const noncoloredHeart=document.querySelector(".noncolored-heart");
-    const coloredHeart=document.querySelector(".colored-heart");
-    const likesNumber=document.querySelector(".main-likes-number");
+    const noncoloredHeart=document.querySelectorAll(".noncolored-heart");
+    const coloredHeart=document.querySelectorAll(".colored-heart");
+    /*const likesNumber=document.querySelectorAll(".main-likes-number");*/
 
-    noncoloredHeart.addEventListener("click",()=>{
+    coloredHeart.forEach(item=>{
+        item.style.display="none";})
 
-        noncoloredHeart.style.display = "none";
-        coloredHeart.style.display="initial";
+    for(i=0;i<noncoloredHeart.length;i++) {
 
-        /*누르면 숫자 +1*/
-        let count=Number(likesNumber.textContent);
-        likesNumber.textContent=count+1;
+        noncoloredHeart[i].addEventListener("click", (event) => {
+            const target=event.target;
 
-    });
+            target.style.display = "none";
+            target.nextElementSibling.style.display="initial";
+            const count=Number(target.nextElementSibling.nextElementSibling.textContent);
 
-    coloredHeart.addEventListener("click",()=>{
+            //좋아요 수 증가
+            target.nextElementSibling.nextElementSibling.textContent=String(count+1);
+
+        });
+
+        coloredHeart[i].addEventListener("click", (event) => {
+            const target=event.target;
+            target.style.display = "none";
+            target.previousElementSibling.style.display="initial";
+            const count=Number(target.nextElementSibling.textContent);
+
+            //좋아요 수 감소
+            target.nextElementSibling.textContent=String(count-1);
+
+            /* coloredHeart[i].style.display = "initial";
+
+             /!*누르면 숫자 +1*!/
+             let count = Number(likesNumber[i].textContent);
+             likesNumber[i].textContent = String(count + 1);
+            */
+        });
+    }
+    }
+
+
+  /*  coloredHeart.addEventListener("click",()=>{
 
         noncoloredHeart.style.display = "initial";
         coloredHeart.style.display="none";
 
-        /*누르면 숫자 -1*/
+        /!*누르면 숫자 -1*!/
         let count=Number(likesNumber.textContent);
         likesNumber.textContent=count-1;
 
-    });
+    });*/
 
-}
+
 
 
 //공유 sns 채널 박스
@@ -70,8 +96,6 @@ const showShareBox=()=>{
 
 
 //예매하기/booking 버튼 누르면 티켓예매 페이지로 이동
-
-
 //예매/취소안내 이동시 보여질 section 고르기
 
 const showcancel=()=> {
@@ -97,7 +121,6 @@ const showcancel=()=> {
         refund.classList.add("hide");
         map.classList.add("hide");
         review.classList.add("hide");
-
         cancel.classList.add("on");
         info.classList.remove("on");
         reviewbutton.classList.remove("on");
@@ -236,4 +259,5 @@ const starRate=()=> {
         star.value = 5; //5점 부여
     });
 }
+
 
