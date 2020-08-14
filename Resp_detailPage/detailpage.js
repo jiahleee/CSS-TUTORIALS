@@ -4,6 +4,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     showShareBox();
     showcancel();
     registerReview();
+    closeReview();
+    starRate();
 
     const returnTopButton=document.querySelector(".return-top-button");
     returnTopButton.addEventListener("click",()=>{
@@ -137,7 +139,7 @@ const showcancel=()=> {
 }
 
 
-/*//리뷰작성 버튼 클릭 시 보여줄 페이지 구현
+//리뷰작성 버튼 클릭 시 보여줄 페이지 구현
 
 const registerReview=()=>{
     const reviewOkButton=document.querySelector(".review-ok-button");
@@ -146,6 +148,85 @@ const registerReview=()=>{
         modal.classList.remove("hide");
         modal.classList.add("show");
     });
-}*/
+}
 
+
+//닫기버튼
+
+const closeReview=()=>{
+    const closeButton=document.querySelector(".close-button");
+    const modal=document.querySelector(".modal");
+    closeButton.addEventListener("click",()=>{
+        modal.classList.remove("show");
+        modal.classList.add("hide");
+    })
+
+}
+
+//별점주기
+
+// 초기 별점셋팅
+const starRate=()=> {
+
+    const star = document.querySelector("#star");
+    star.value = 5; //5점 부여
+
+    const stars = document.querySelectorAll(".starlist i");
+    console.log(stars);
+
+    stars.forEach(item=>{item.classList.add("staron")
+    });//초기 모든 별 꽉차게
+
+
+   /* for (i=0; i<stars.length; i++) {
+        const prev = stars[i].previousElementSibling;
+        if (prev.classList.contains("sub-block-container")) {
+            prev.style.borderBottom = "none";
+        }
+    }
+
+
+    var elem = document.getElementsByClassName("q-block-container");
+    for (i=0; i<elem.length; i++) {
+        var prev = elem[i].previousElementSibling;
+        if (prev.classList.contains("sub-block-container")) {
+            prev.style.borderBottom = "none";
+        }
+    }
+
+
+    const prevAll=(array)=>{
+        var result = [];
+        for (i=0; i<array.length; i++) {
+        while (array[i].previousElementSibling)
+            result.push();
+        return result;
+    }*/
+    stars[0].addEventListener("click",()=>{
+        stars[1].classList.remove("staron");
+        stars[2].classList.remove("staron");
+        stars[3].classList.remove("staron");
+        stars[4].classList.remove("staron");
+        star.value=1;
+    });
+    stars[1].addEventListener("click",()=>{
+        stars[2].classList.remove("staron");
+        stars[3].classList.remove("staron");
+        stars[4].classList.remove("staron");
+        star.value=2;
+    })
+    stars[2].addEventListener("click",()=>{
+        stars[3].classList.remove("staron");
+        stars[4].classList.remove("staron");
+        star.value=3;
+    })
+    stars[3].addEventListener("click",()=>{
+        stars[4].classList.remove("staron");
+        star.value=4;
+    })
+    /*stars[4].addEventListener("click",()=>{
+        star.value=5;
+    })*/
+
+}
 

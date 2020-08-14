@@ -624,9 +624,10 @@ button,input,textarea{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.review .review-desc p{
+.review .review-desc .cautionpara{
     font-size: 13px;
     margin-bottom: 20px;
 }
@@ -658,7 +659,8 @@ button,input,textarea{
     text-align: center;
     font-size: 14px;
     margin-bottom: 15px;
-    position: relative;
+
+
 }
 
 
@@ -846,10 +848,12 @@ button,input,textarea{
 
 .modal{
     position: absolute;
-    display: flex;
+   /* display: flex;*/
     justify-content: center;
     align-items: center;
     z-index: 100;
+    background-color: #fff;
+    width: 100%;
 }
 
 .modal-title{
@@ -857,13 +861,15 @@ button,input,textarea{
     justify-content: space-between;
     align-items: center;
 }
-.modal-group{
-    width: 100%;
-}
 
-.post-title{
+.modal-title .post-title{
     font-size: 30px;
     font-weight: 700;
+    margin-bottom: 0;
+}
+
+.modal-group{
+    width: 100%;
 }
 
 .modal .modal-title .close-button {
@@ -890,7 +896,6 @@ button,input,textarea{
     width: 20%;
     margin-right: 2%;
     font-weight: 700;
-
 }
 
 
@@ -900,17 +905,24 @@ button,input,textarea{
     align-items: center;
     border-bottom: 1px solid black;
     font-size: 15px;
+    padding: 0 15px;
 }
 
 .modal .modal-form .modal-table .datestar {
     height: 70px;
 }
 
-.modal .modal-form .modal-table .datestar a {
-    text-decoration: none;
+
+.modal .modal-form .modal-table .datestar i {
     font-size: 25px;
-    color: #ec7d2c;
+    color: #333333;
 }
+
+
+.modal .modal-form .modal-table .datestar .staron{
+    color:#ec7d2c;
+}
+
 
 .modal .modal-form .modal-table .table-content {
     width: 75%;
@@ -1172,113 +1184,13 @@ button,input,textarea{
     }*/
     /*modal*/
 
-    .modal {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 100;
+
+    .modal{
+        width: 600px;
     }
-
-
-    .modal .modal-group {
-        width: 60%;
-        background-color: #ffffff;
-        margin: 0 auto;
-        padding: 10px 50px;
-
-    }
-
-    .modal .modal-title .close-button {
-        transform: rotate(45deg);
-        cursor: pointer;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        background-color: #fff;
-        font-size: 30px;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        outline: 0;
-    }
-
-    .modal .modal-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 25px;
-        font-weight: 700;
-        border-bottom: 1px solid black;
-    }
-
-
-    .modal .modal-form .modal-table {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .modal .modal-form .modal-table .table-title {
-        width: 20%;
-        margin-right: 2%;
-        font-weight: 700;
-
-    }
-
-
     .modal .modal-form .modal-table .row {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        border-bottom: 1px solid black;
-        font-size: 15px;
+      width: 100%;
     }
-
-    .modal .modal-form .modal-table .datestar {
-        height: 70px;
-    }
-
-    .modal .modal-form .modal-table .datestar a {
-        text-decoration: none;
-        font-size: 25px;
-        color: #ec7d2c;
-    }
-
-    .modal .modal-form .modal-table .table-content {
-        width: 75%;
-        margin: 10px 0;
-    }
-
-    .modal .modal-form .modal-table .table-content textarea {
-        width: 100%;
-        height: 200px;
-    }
-
-
-    .post-buttons {
-        width: 30%;
-        border: 1px solid #ec7d2c;
-        margin: 20px auto;
-
-    }
-
-
-    .post-buttons .post-ok-button {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        background-color: #ec7d2c;
-        color: white;
-        border: 1px solid #ec7d2c;
-
-    }
-
 
 
 }/*end of mediaQuery*/
